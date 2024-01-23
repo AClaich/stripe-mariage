@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dataconnexions",
+  "info": {
+    "singularName": "dataconnexion",
+    "pluralName": "dataconnexions",
+    "displayName": "dataconnexion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "isVin": {
+      "type": "integer"
+    },
+    "isReception": {
+      "type": "integer"
+    },
+    "isRetour": {
+      "type": "integer"
+    },
+    "canInvite": {
+      "type": "integer"
+    },
+    "presenceVin1": {
+      "type": "integer"
+    },
+    "presenceVin2": {
+      "type": "integer"
+    },
+    "presenceReception1": {
+      "type": "integer"
+    },
+    "presenceReception2": {
+      "type": "integer"
+    },
+    "presenceRetour1": {
+      "type": "integer"
+    },
+    "presenceRetour2": {
+      "type": "integer"
+    },
+    "vegetarien1": {
+      "type": "integer"
+    },
+    "vegetarien2": {
+      "type": "integer"
+    },
+    "logement1": {
+      "type": "integer"
+    },
+    "logement2": {
+      "type": "integer"
+    },
+    "jeudi1": {
+      "type": "integer"
+    },
+    "vendredi1": {
+      "type": "integer"
+    },
+    "samedi1": {
+      "type": "integer"
+    },
+    "jeudi2": {
+      "type": "integer"
+    },
+    "vendredi2": {
+      "type": "integer"
+    },
+    "samedi2": {
+      "type": "integer"
+    }
+  }
+}
