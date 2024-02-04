@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
     },
   },
   app: {
-    keys: env.array('APP_KEYS', 'm6wjIgSYCfj1MKnrgYO+tQ==', 'lWqBrbMQZFSrQQYB/KReCA=='),
+    keys: env.array('APP_KEYS', ['m6wjIgSYCfj1MKnrgYO+tQ==', 'lWqBrbMQZFSrQQYB/KReCA==']),
   },
   // webhooks: {
   //   populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
