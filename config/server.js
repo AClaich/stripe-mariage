@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
-  port: env.int('PORT', 1337),
-  url: env('STRAPI_URL', 'https://www.mariage-alexis-margaux.site/'),
+  port: env.int('PORT', 4200),
+  // url: env('STRAPI_URL', 'https://www.mariage-alexis-margaux.site/'),
   admin: {
     auth: {
       secret: env('ADMIN_JWT_SECRET', '5bGaWCKgRV9VuPfwr8l+xg=='),
