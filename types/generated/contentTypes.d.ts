@@ -362,82 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiDataconnexionDataconnexion extends Schema.CollectionType {
-  collectionName: 'dataconnexions';
-  info: {
-    singularName: 'dataconnexion';
-    pluralName: 'dataconnexions';
-    displayName: 'dataconnexion';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    nom: Attribute.String;
-    prenom: Attribute.String;
-    number: Attribute.Integer;
-    email: Attribute.String;
-    password: Attribute.String;
-    isVin: Attribute.Integer;
-    isReception: Attribute.Integer;
-    isRetour: Attribute.Integer;
-    canInvite: Attribute.Integer;
-    presenceVin1: Attribute.Integer;
-    presenceVin2: Attribute.Integer;
-    presenceReception1: Attribute.Integer;
-    presenceReception2: Attribute.Integer;
-    presenceRetour1: Attribute.Integer;
-    presenceRetour2: Attribute.Integer;
-    vegetarien1: Attribute.Integer;
-    vegetarien2: Attribute.Integer;
-    logement1: Attribute.Integer;
-    logement2: Attribute.Integer;
-    jeudi1: Attribute.Integer;
-    vendredi1: Attribute.Integer;
-    samedi1: Attribute.Integer;
-    jeudi2: Attribute.Integer;
-    vendredi2: Attribute.Integer;
-    samedi2: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::dataconnexion.dataconnexion',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::dataconnexion.dataconnexion',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiTestTest extends Schema.CollectionType {
-  collectionName: 'tests';
-  info: {
-    singularName: 'test';
-    pluralName: 'tests';
-    displayName: 'test';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -844,6 +768,83 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiDataconnexionDataconnexion extends Schema.CollectionType {
+  collectionName: 'dataconnexions';
+  info: {
+    singularName: 'dataconnexion';
+    pluralName: 'dataconnexions';
+    displayName: 'dataconnexion';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nom: Attribute.String;
+    prenom: Attribute.String;
+    number: Attribute.Integer;
+    email: Attribute.String;
+    password: Attribute.String;
+    isVin: Attribute.Integer;
+    isReception: Attribute.Integer;
+    isRetour: Attribute.Integer;
+    canInvite: Attribute.Integer;
+    presenceVin1: Attribute.Integer;
+    presenceVin2: Attribute.Integer;
+    presenceReception1: Attribute.Integer;
+    presenceReception2: Attribute.Integer;
+    presenceRetour1: Attribute.Integer;
+    presenceRetour2: Attribute.Integer;
+    vegetarien1: Attribute.Integer;
+    vegetarien2: Attribute.Integer;
+    logement1: Attribute.Integer;
+    logement2: Attribute.Integer;
+    jeudi1: Attribute.Integer;
+    vendredi1: Attribute.Integer;
+    samedi1: Attribute.Integer;
+    jeudi2: Attribute.Integer;
+    vendredi2: Attribute.Integer;
+    samedi2: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::dataconnexion.dataconnexion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::dataconnexion.dataconnexion',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTestTest extends Schema.CollectionType {
+  collectionName: 'tests';
+  info: {
+    singularName: 'test';
+    pluralName: 'tests';
+    displayName: 'test';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -854,8 +855,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::dataconnexion.dataconnexion': ApiDataconnexionDataconnexion;
-      'api::test.test': ApiTestTest;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -864,6 +863,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::dataconnexion.dataconnexion': ApiDataconnexionDataconnexion;
+      'api::test.test': ApiTestTest;
     }
   }
 }
